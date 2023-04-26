@@ -1,7 +1,9 @@
 package com.ecommerce.Ecommerce.Models;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.*;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,15 +12,11 @@ import lombok.Setter;
 @Setter
 @Data
 @Entity
-
-public class ShippingAddress {
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
-    String fullName;
-    String addressLine;
-    String city;
-    String state;
-    String postalCode;
-    String country;
+    Integer productId;
+    String productName;
+    double price;
+    float quantity;
 }

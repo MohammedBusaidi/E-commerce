@@ -2,23 +2,24 @@ package com.ecommerce.Ecommerce.Models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;
+import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Getter
 @Setter
 @Data
 @Entity
 
-public class ShippingAddress {
+public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
-    String fullName;
-    String addressLine;
-    String city;
-    String state;
-    String postalCode;
-    String country;
+    Integer reviewId;
+//    @ManyToOne
+//    User user;
+//    @ManyToOne
+//    Product product;
+    String reviewText;
 }

@@ -5,20 +5,20 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Getter
 @Setter
 @Data
 @Entity
 
-public class ShippingAddress {
+public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
-    String fullName;
-    String addressLine;
-    String city;
-    String state;
-    String postalCode;
-    String country;
+    Integer paymentId;
+    Integer orderId;
+//    @ManyToOne
+//    public User user;
+//    @OneToOne
+//    Order order;
 }
